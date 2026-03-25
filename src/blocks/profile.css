@@ -1,0 +1,136 @@
+.profile {
+  max-width: 880px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+}
+
+.profile__image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 30px;
+}
+
+.profile__info {
+  display: grid;
+  grid-template-areas:
+    "title button"
+    "profession .";
+  align-items: center;
+  margin: 0;
+}
+
+.profile__info-name {
+  max-width: 373px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+  color: #fff;
+  grid-area: title;
+  margin: 0;
+  margin-right: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.profile__info-profession {
+  max-width: 415px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.78px;
+  color: #fff;
+  grid-area: profession;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.profile__info-button-edit:hover {
+  opacity: 60%;
+}
+
+.profile__info-button-edit {
+  max-width: 24px;
+  grid-area: button;
+  margin-right: 165px;
+  width: 24px;
+  height: 24px;
+  background: transparent url(../images/profile__info-button-vetor.png) center
+    no-repeat;
+  background-size: 10px 10px;
+  border: 1px solid #fff;
+}
+
+.profile__button:hover {
+  opacity: 60%;
+}
+
+.profile__button {
+  max-width: 150px;
+  height: 50px;
+  width: 150px;
+  background: transparent url(../images/profile__buton-vetor.png) no-repeat
+    center;
+  border: 2px solid #fff;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 920px) {
+  .profile {
+    max-width: 282px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile__image {
+    margin-top: 42px;
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+
+  .profile__info {
+    max-width: 282px;
+    display: grid;
+    grid-template-areas:
+      "title button"
+      "profession profession";
+    row-gap: 14px;
+    column-gap: 10px;
+  }
+
+  .profile__info-name {
+    font-size: 22px;
+    line-height: 26.63px;
+    margin: 0;
+  }
+
+  .profile__info-profession {
+    font-size: 14px;
+    line-height: 16.94px;
+    text-align: center;
+  }
+
+  .profile__info-button {
+    max-width: 18px;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+  }
+
+  .profile__info-button-edit {
+    margin: 0;
+  }
+
+  .profile__button {
+    max-width: 282px;
+    width: 100%;
+    margin: 36px auto;
+  }
+}

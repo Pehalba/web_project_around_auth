@@ -1,0 +1,209 @@
+/* Páginas de autenticação (Figma Sprint 17) — desktop + mobile MOBILE 320px */
+
+.auth-page {
+  min-height: 100vh;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.auth-page__header {
+  width: 100%;
+  max-width: 880px;
+  margin-top: 45px;
+  padding: 16px 8px;
+  border-bottom: 1px solid #545454;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.auth-page__logo-row {
+  display: flex;
+  align-items: center;
+}
+
+/* Vector.png já traz "Around" + "The U.S." — não repetir texto no HTML */
+.auth-page__logo-img {
+  max-width: 173px;
+  height: auto;
+  display: block;
+}
+
+.auth-page__header-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.auth-page__header-link:hover {
+  opacity: 0.85;
+}
+
+.auth-page__main {
+  flex: 1;
+  width: 100%;
+  max-width: 880px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 19px 60px;
+  box-sizing: border-box;
+}
+
+.auth-page__title {
+  margin: 0 0 40px;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1;
+  text-align: center;
+}
+
+.auth-page__form {
+  width: 100%;
+  max-width: 358px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.auth-page__field {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Login e cadastro: mesma lógica — placeholder some ao digitar; linha como no Figma */
+.auth-page__field-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 0 10px;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  border-radius: 0;
+  background: transparent;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+}
+
+.auth-page__field-input:focus {
+  border-bottom-color: #ffffff;
+}
+
+/* Placeholder = "E-mail" / "Senha" até o usuário digitar (comportamento Figma) */
+.auth-page__field-input::placeholder {
+  color: #ffffff;
+  opacity: 1;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.auth-page__submit {
+  width: 100%;
+  max-width: 358px;
+  height: 50px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 2px;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.auth-page__submit:hover {
+  opacity: 0.92;
+}
+
+.auth-page__footer-text {
+  margin: 16px 0 0;
+  max-width: 358px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.auth-page__footer-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.auth-page__footer-link:hover {
+  opacity: 0.85;
+}
+
+/* Mobile (frame MOBILE ~320×568): campos 260px, margens laterais 30px */
+@media screen and (max-width: 600px) {
+  .auth-page__header {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 28px;
+    padding: 16px 30px;
+    min-height: 56px;
+    box-sizing: border-box;
+  }
+
+  .auth-page__logo-img {
+    max-width: 140px;
+  }
+
+  .auth-page__header-link {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .auth-page__main {
+    max-width: 100%;
+    width: 100%;
+    padding: 32px 30px 48px;
+    box-sizing: border-box;
+  }
+
+  .auth-page__title {
+    font-size: 20px;
+    font-weight: 900;
+    margin: 0 0 36px;
+  }
+
+  .auth-page__form {
+    max-width: 260px;
+    gap: 28px;
+  }
+
+  .auth-page__field-input {
+    border-bottom-width: 1px;
+    border-bottom-color: #ffffff;
+  }
+
+  .auth-page__field-input:focus {
+    border-bottom-color: #ffffff;
+  }
+
+  .auth-page__field-input::placeholder {
+    color: #ffffff;
+    opacity: 0.85;
+  }
+
+  .auth-page__submit {
+    max-width: 260px;
+    height: 46px;
+    font-size: 16px;
+    margin-top: 4px;
+  }
+
+  .auth-page__footer-text {
+    max-width: 260px;
+    font-size: 12px;
+    line-height: 1;
+  }
+}
