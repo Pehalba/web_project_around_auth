@@ -19,5 +19,4 @@ React, Vite, CSS (BEM), React Router. APIs em `src/utils`.
 
 ## Entrega
 
-**Link do site online:** _(adicione quando publicar)_  
-Fotos ou vídeo do projeto: _(o curso recomenda)_
+**Link do site online:** https://pehalba.github.io/web_project_around_auth/

@@ -10,6 +10,7 @@ export default function Register(props) {
   const [password, setPassword] = useState("");
   const [isSuccessOpen, setIsSuccessOpen] = useState(false);
   const [isErrorOpen, setIsErrorOpen] = useState(false);
+  const logoSrc = `${import.meta.env.BASE_URL}images/Vector.png`;
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -34,7 +35,7 @@ export default function Register(props) {
         <div className="auth-page__logo-row">
           <img
             className="auth-page__logo-img"
-            src="/images/Vector.png"
+            src={logoSrc}
             alt="Around The U.S."
           />
         </div>

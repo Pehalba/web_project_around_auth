@@ -4,6 +4,7 @@ import { useState } from "react";
 export default function Header(props) {
   const { userEmail, onLogout } = props;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const logoSrc = `${import.meta.env.BASE_URL}images/Vector.png`;
 
   function handleToggleMenu() {
     setIsMenuOpen((open) => !open);
@@ -36,7 +37,7 @@ export default function Header(props) {
         <div className="header__row">
           <img
             className="header__nav-image"
-            src="/images/Vector.png"
+            src={logoSrc}
             alt="Around The U.S."
           />
           <div className="header__user header__user_desktop">

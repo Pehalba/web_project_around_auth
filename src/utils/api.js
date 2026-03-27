@@ -1,20 +1,16 @@
-import { getStoredToken } from "./auth.js";
-
-// Chamadas s API Around (cartões, perfil).
 class Api {
   constructor(options) {
     this._baseUrl = options.baseUrl;
+    this._headers = options.headers;
   }
 
   _getHeaders() {
-    const token = getStoredToken();
     return {
-      "Content-Type": "application/json",
-      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      ...this._headers,
     };
   }
 
-  // status 200 = ok; senão rejeita
+  // status 200
   _checkResponse(res) {
     if (res.ok) {
       return res.json();
@@ -100,9 +96,13 @@ class Api {
   }
 }
 
-// Uma instncia só para importar
+// Troque o valor de "authorization"
 const api = new Api({
   baseUrl: "https://around-api.pt-br.tripleten-services.com/v1",
+  headers: {
+    authorization: "1810a42d-fdc3-4792-8e4b-3db3b1d49d4d",
+    "Content-Type": "application/json",
+  },
 });
 
 export default api;
