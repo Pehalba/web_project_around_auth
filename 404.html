@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <script>
+      // SPA redirect for GitHub Pages:
+      // send /repo/anything -> /repo/?p=/anything so index.html can restore it.
+      (function () {
+        var l = window.location;
+        var repo = "/web_project_around_auth";
+        var path = l.pathname.startsWith(repo) ? l.pathname.slice(repo.length) : l.pathname;
+        var newUrl = l.origin + repo + "/?p=" + encodeURIComponent(path + l.search + l.hash);
+        window.location.replace(newUrl);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+
